@@ -1,6 +1,4 @@
-*{
-    overflow-x: hidden;
-}
+
 .nav1, .nav2, .nav3, .nav4, .nav5, .nav6, .nav7{
     transition: ease-in-out;
 }
@@ -18,6 +16,7 @@
 }
 
 .bg{
+    z-index: 5;
     background-image: linear-gradient(to left, #d9d9d916 , #01443046, #01281dde), url('./pics/bg.png');
 }
 
@@ -27,4 +26,15 @@
     border-radius: 5px;
     border-radius: 2px solid white;
     background-color: #E4A71C;
+}
+
+
+.zoom:hover{
+    animation: popout 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes popout {
+    from{transform:scale(1)}
+    to{transform:scale(1.05)}
 }

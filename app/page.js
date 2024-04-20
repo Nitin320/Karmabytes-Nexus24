@@ -19,6 +19,10 @@ import bg from "./pics/bg.png"
 import gradient from "./pics/gradient.png"
 import shapes from "./pics/shapes.png"
 
+import price1 from "./pics/price1.png"
+import price2 from "./pics/price2.png"
+import price3 from "./pics/price3.png"
+
 import "./main.css"
 
 
@@ -112,7 +116,7 @@ export default function Home() {
         <div className="flex flex-row justify-center items-center">
           <div className="nav3" onClick={nav2}>Food Waste</div>
 
-          <div className="flex-col justify-center items-center gap-5 absolute top-[15vh] w-[40vh] h-[25vh] bg-[#9AD19C] rounded-[10px] hidden text-[#137D17]" ref={ref2}>
+          <div className="z-[50] flex-col justify-center items-center gap-5 absolute top-[15vh] w-[40vh] h-[25vh] bg-[#9AD19C] rounded-[10px] hidden text-[#137D17]" ref={ref2}>
             <div className='flex flex-row justify-center items-center'>
               <Image src={nonexp} width={30} height={30}/>
               <div className='cursor-pointer'>Not Expired</div>
@@ -169,6 +173,49 @@ export default function Home() {
             <div className='text-[1rem] text-[white] explore'>Explore Plans</div>
           </div>
         </div>
+      </div>
+
+      <div className='absolute top-[90vh] right-0'>
+        <Image src={shapes} width={300} height={300}/>
+      </div>
+
+      <div className='absolute top-[115vh] '>
+        <div className='text-[#137D17] font-bold text-[2.5rem] ml-[10vw] border-b-2 border-[#137D17] mb-[10vh] w-[30vw]'>Subscription Plan</div>
+
+        <div className='w-[100vw] flex flex-row justify-center items-center gap-4'>
+
+          <div className='zoom flex flex-col justify-center items-start p-7 bg-[#E6F5E7] gap-7 w-[30vw] h-[60vh] rounded-md'>
+            <div className='font-bold text-[1.5rem]'>Tier 1</div>
+            <div>
+              <li>Shops/Offices</li>
+              <li className=''>Small scale waste generation</li>
+            </div>
+            <Image src={price1} width={120} height={120}/>
+            <div className='mt-[5vh] pr-[10vw] pl-[10vw] pt-[1vh] pd-[1vh] cursor-pointer bg-[#99C292] rounded-md truncate'>Select Plan</div>
+          </div>
+          
+          <div className='zoom flex flex-col justify-center items-start p-7 bg-[#8EC68F] gap-7 w-[30vw] h-[60vh] rounded-md'>
+            <div className='font-bold text-[1.5rem]'>Tier 2</div>
+            <div>
+              <li>Institutions/Apartments</li>
+              <li className=''>Medium scale waste generation</li>
+            </div>
+            <Image src={price2} width={120} height={120}/>
+            <div className='mt-[5vh] pr-[10vw] pl-[10vw] pt-[1vh] pd-[1vh] cursor-pointer bg-[white] rounded-md truncate'>Select Plan</div>
+          </div>
+
+          <div className='zoom flex flex-col justify-center items-start p-7 bg-[#E6F5E7] gap-7 w-[30vw] h-[60vh] rounded-md'>
+            <div className='font-bold text-[1.5rem]'>Tier 3</div>
+            <div>
+              <li>Industries/Malls</li>
+              <li className=''>High scale waste generation</li>
+            </div>
+            <Image src={price3} width={120} height={120}/>
+            <div className='mt-[5vh] pr-[10vw] pl-[10vw] pt-[1vh] pd-[1vh] cursor-pointer bg-[#99C292] rounded-md truncate'>Select Plan</div>
+          </div>
+
+        </div>
+
       </div>
 
     </main>
