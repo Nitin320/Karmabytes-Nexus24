@@ -85,7 +85,11 @@ export default function Home() {
         <Image src={logo} width={100} height={100}/>
 
         <div className="flex flex-row justify-center items-center">
-          <div className="nav1" onClick={nav1}>Home</div>
+          <div className="nav1">Home</div>
+        </div>
+
+        <div className="flex flex-row justify-center items-center">
+          <div className="nav2" onClick={nav1}>Residential</div>
 
           <div className="flex-col justify-center items-center gap-5 absolute top-[15vh] w-[40vh] h-[25vh] bg-[#9AD19C] rounded-[10px] hidden text-[#137D17]" ref={ref1}>
             <div className='flex flex-row justify-center items-center'>
@@ -99,13 +103,10 @@ export default function Home() {
           </div>
 
         </div>
-        
-        <div className="flex flex-row justify-center items-center">
-          <div className="nav2">residential</div>
-        </div>
+
 
         <div className="flex flex-row justify-center items-center">
-          <div className="nav3" onClick={nav2}>food Waste</div>
+          <div className="nav3" onClick={nav2}>Food Waste</div>
 
           <div className="flex-col justify-center items-center gap-5 absolute top-[15vh] w-[40vh] h-[25vh] bg-[#9AD19C] rounded-[10px] hidden text-[#137D17]" ref={ref2}>
             <div className='flex flex-row justify-center items-center'>
@@ -149,6 +150,10 @@ export default function Home() {
 
         <div className="flex flex-row justify-center items-center">
           <div className="nav7">Contact Us</div>
+        </div>
+
+        <div className="flex flex-row justify-center items-center">
+          <div className="nav8">Request Pickup</div>
         </div>
         
       </div>
