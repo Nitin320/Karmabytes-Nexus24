@@ -15,6 +15,10 @@ import nonbio from "./pics/nonbio.png"
 import nonexp from "./pics/nonexp.png"
 import exp from "./pics/exp.png"
 
+import bg from "./pics/bg.png"
+import gradient from "./pics/gradient.png"
+import shapes from "./pics/shapes.png"
+
 import "./main.css"
 
 
@@ -58,7 +62,7 @@ export default function Home() {
   return (
     <main className="w-[100vw] h-[200vh]">
 
-      <div className=" fixed w-[100vw] h-[10vh] bg-[#013022] flex flex-row justify-between items-center gap-2 text-white text-[0.7rem]">
+      <div className="z-50 fixed w-[100vw] h-[10vh] bg-[#013022] flex flex-row justify-between items-center gap-2 text-white text-[0.7rem]">
 
         <div className="flex flex-row justify-center items-center m-[1vh] gap-10 ml-[5vw]">
           <div className="flex flex-row justify-center items-center gap-2">
@@ -80,7 +84,7 @@ export default function Home() {
 
       </div>
 
-      <div className="fixed w-[100vw] h-[13vh] top-[10vh] bg-[#137D17] flex flex-row justify-center items-center gap-8 text-white text-[0.8rem]">
+      <div className="z-50 fixed w-[100vw] h-[13vh] top-[10vh] bg-[#137D17] flex flex-row justify-center items-center gap-8 text-white text-[0.8rem]">
 
         <Image src={logo} width={100} height={100}/>
 
@@ -156,6 +160,15 @@ export default function Home() {
           <div className="nav8">Request Pickup</div>
         </div>
         
+      </div>
+
+      <div className='bg-main'>
+        <div className='bg absolute top-[22vh] h-[80vh] w-[100vw] flex flex-col justify-center'>
+          <div className='flex flex-col justify-center items-start ml-[10vh] gap-7'>
+            <div className='text-[2.5rem] font-bold text-[white]'>Waste Management<br></br>Garbage Pickup<br></br>Agricultural Setups</div>
+            <div className='text-[1rem] text-[white] explore'>Explore Plans</div>
+          </div>
+        </div>
       </div>
 
     </main>
