@@ -16,7 +16,6 @@
 }
 
 .bg{
-    z-index: 5;
     background-image: linear-gradient(to left, #d9d9d916 , #01443046, #01281dde), url('./pics/bg.png');
 }
 

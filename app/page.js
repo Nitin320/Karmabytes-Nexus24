@@ -1,5 +1,6 @@
 "use client"
 import  React, { useRef } from 'react';
+import Script from "next/script"
 
 import Image from "next/image";
 import phone from "./pics/phone.png"
@@ -64,9 +65,15 @@ export default function Home() {
   }
 
   return (
+    <div>
+    <head>
+                
+                <Script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></Script>
+                <Script src="https://mediafiles.botpress.cloud/7f31a681-897b-42cf-b109-88b93224dd76/webchat/config.js" defer></Script>
+            </head>
     <main className="w-[100vw] h-[200vh]">
 
-      <div className="z-50 fixed w-[100vw] h-[10vh] bg-[#013022] flex flex-row justify-between items-center gap-2 text-white text-[0.7rem]">
+      <div className="z-10 fixed w-[100vw] h-[10vh] bg-[#013022] flex flex-row justify-between items-center gap-2 text-white text-[0.7rem]">
 
         <div className="flex flex-row justify-center items-center m-[1vh] gap-10 ml-[5vw]">
           <div className="flex flex-row justify-center items-center gap-2">
@@ -88,7 +95,7 @@ export default function Home() {
 
       </div>
 
-      <div className="z-50 fixed w-[100vw] h-[13vh] top-[10vh] bg-[#137D17] flex flex-row justify-center items-center gap-8 text-white text-[0.8rem]">
+      <div className="z-10 fixed w-[100vw] h-[13vh] top-[10vh] bg-[#137D17] flex flex-row justify-center items-center gap-8 text-white text-[0.8rem]">
 
         <Image src={logo} width={100} height={100}/>
 
@@ -191,7 +198,7 @@ export default function Home() {
               <li className=''>Small scale waste generation</li>
             </div>
             <Image src={price1} width={120} height={120}/>
-            <div className='mt-[5vh] pr-[10vw] pl-[10vw] pt-[1vh] pd-[1vh] cursor-pointer bg-[#99C292] rounded-md truncate'>Select Plan</div>
+            <div className='mt-[5vh] pr-[10vw] pl-[10vw] pt-[1vh] pd-[1vh] cursor-pointer bg-[#99C292] rounded-md truncate'><a href='https://forms.gle/BUEH67Zn3s5XkPjp9' target='_BLANK'>Select Plan</a></div>
           </div>
           
           <div className='zoom flex flex-col justify-center items-start p-7 bg-[#8EC68F] gap-7 w-[30vw] h-[60vh] rounded-md'>
@@ -201,7 +208,7 @@ export default function Home() {
               <li className=''>Medium scale waste generation</li>
             </div>
             <Image src={price2} width={120} height={120}/>
-            <div className='mt-[5vh] pr-[10vw] pl-[10vw] pt-[1vh] pd-[1vh] cursor-pointer bg-[white] rounded-md truncate'>Select Plan</div>
+            <div className='mt-[5vh] pr-[10vw] pl-[10vw] pt-[1vh] pd-[1vh] cursor-pointer bg-[white] rounded-md truncate'><a href='https://forms.gle/BUEH67Zn3s5XkPjp9' target='_BLANK'>Select Plan</a></div>
           </div>
 
           <div className='zoom flex flex-col justify-center items-start p-7 bg-[#E6F5E7] gap-7 w-[30vw] h-[60vh] rounded-md'>
@@ -211,7 +218,7 @@ export default function Home() {
               <li className=''>High scale waste generation</li>
             </div>
             <Image src={price3} width={120} height={120}/>
-            <div className='mt-[5vh] pr-[10vw] pl-[10vw] pt-[1vh] pd-[1vh] cursor-pointer bg-[#99C292] rounded-md truncate'>Select Plan</div>
+            <div className='mt-[5vh] pr-[10vw] pl-[10vw] pt-[1vh] pd-[1vh] cursor-pointer bg-[#99C292] rounded-md truncate'><a href='https://forms.gle/BUEH67Zn3s5XkPjp9' target='_BLANK'>Select Plan</a></div>
           </div>
 
         </div>
@@ -219,5 +226,6 @@ export default function Home() {
       </div>
 
     </main>
+    </div>
   );
 }
