@@ -1,0 +1,9 @@
+0 Nothing
+1 Granville wilt
+2 Blight of beans
+3 soft rot
+4 crown gall
+5 Aster yellows
+6 Citrus stubborn 
+7 Barley yellow dwarf
+8 Fusarium wilt of tomato

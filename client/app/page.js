@@ -24,6 +24,10 @@ import price1 from "./pics/price1.png"
 import price2 from "./pics/price2.png"
 import price3 from "./pics/price3.png"
 
+import patternleft from "./pics/patternleft.png"
+import bannerstuff from "./pics/bannerstuff.png"
+import trod from "./pics/trod.jpg"
+
 import "./main.css"
 
 
@@ -32,26 +36,51 @@ export default function Home() {
   const[message, setMessage] = useState("Loading");
 
   const handleClick = () => {
-    sendDataToFlask("HIIIIII")
+    sendDataToFlask()
+  }
+  const handleClick2 = () => {
+    sendDataToFlask2()
   }
 
   
-  const sendDataToFlask = async (data) => {
+  const sendDataToFlask = async () => {
     try {
         const response = await fetch('http://localhost:8080/api/home', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ message: 'Hello from Next.js' })
+            body: JSON.stringify({ message: 'welcome' })
         });
         if (response.ok) {
             console.log('Data sent successfully');
         } else {
             console.error('Failed to send data');
         }
-        const responseBody = await response.json();
-        setMessage(responseBody.message)
+        // const responseBody = await response.json();
+        // setMessage(responseBody.message)
+        
+    } catch (error) {
+        console.error('Error sending data:', error);
+    }
+  };
+
+  const sendDataToFlask2 = async () => {
+    try {
+        const response = await fetch('http://localhost:8080/api/home', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message: 'welcome2' })
+        });
+        if (response.ok) {
+            console.log('Data sent successfully');
+        } else {
+            console.error('Failed to send data');
+        }
+        // const responseBody = await response.json();
+        // setMessage(responseBody.message)
         
     } catch (error) {
         console.error('Error sending data:', error);
@@ -134,7 +163,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-row justify-center items-center">
-          <div className="nav2" onClick={nav1}>Residential</div>
+          <div className="nav2" onClick={handleClick} >Waste Sorter</div>
 
           <div className="flex-col justify-center items-center gap-5 absolute top-[15vh] w-[40vh] h-[25vh] bg-[#9AD19C] rounded-[10px] hidden text-[#137D17]" ref={ref1}>
             <div className='flex flex-row justify-center items-center'>
@@ -186,7 +215,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-row justify-center items-center">
-          <div className="nav5">Service Area</div>
+          <div className="nav5" onClick={handleClick2}>Diseases</div>
         </div>
 
         <div className="flex flex-row justify-center items-center">
@@ -195,6 +224,10 @@ export default function Home() {
 
         <div className="flex flex-row justify-center items-center">
           <div className="nav7">Contact Us</div>
+        </div>
+
+        <div className="flex flex-row justify-center items-center">
+          <div className="nav9">T-Rod</div>
         </div>
 
         <div className="flex flex-row justify-center items-center">
@@ -207,19 +240,19 @@ export default function Home() {
         <div className='bg absolute top-[22vh] h-[80vh] w-[100vw] flex flex-col justify-center'>
           <div className='flex flex-col justify-center items-start ml-[10vh] gap-7'>
             <div className='text-[2.5rem] font-bold text-[white]'>Waste Management<br></br>Garbage Pickup<br></br>Agricultural Setups</div>
-            <div onClick={handleClick} className='text-[1rem] text-[white] explore'>Explore Plans</div>
+            <div className='text-[1rem] text-[white] explore'><a href="#redirect">Explore Plans</a></div>
           </div>
         </div>
       </div>
 
-      <div className='absolute top-[90vh] right-0'>
+      <div className='absolute top-[95vh] right-[-10vh]'>
         <Image src={shapes} width={300} height={300}/>
       </div>
 
       <div className='absolute top-[115vh] '>
         <div className='text-[#137D17] font-bold text-[2.5rem] ml-[10vw] border-b-2 border-[#137D17] mb-[10vh] w-[30vw]'>Subscription Plan</div>
 
-        <div className='w-[100vw] flex flex-row justify-center items-center gap-4'>
+        <div className='w-[100vw] flex flex-row justify-center items-center gap-4' id='redirect'>
 
           <div className='zoom flex flex-col justify-center items-start p-7 bg-[#E6F5E7] gap-7 w-[30vw] h-[60vh] rounded-md'>
             <div className='font-bold text-[1.5rem]'>Tier 1</div>
@@ -253,6 +286,19 @@ export default function Home() {
 
         </div>
 
+      </div>
+
+      <div className='mb-[5vh]'>
+        <div className='absolute top-[193vh]'>
+          <Image src={patternleft} width={230} height={200}/>
+        </div>
+        <div className='text-[#137D17] font-bold text-[2.5rem] ml-[10vw] border-b-2 border-[#137D17]'>Waste Services</div>
+        <div className='absolute top-[220vh] right-[100vh]'>
+          <Image src={bannerstuff} width={500} height={500}/>
+        </div>
+        <div className='absolute top-[220vh] right-[20vh]'>
+          <Image src={trod} width={400} height={400}/>
+        </div>
       </div>
 
     </main>

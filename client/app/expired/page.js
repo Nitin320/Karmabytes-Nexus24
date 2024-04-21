@@ -61,6 +61,58 @@ function page() {
     }
   }
 
+  const handleClick = () => {
+    sendDataToFlask()
+  }
+  const handleClick2 = () => {
+    sendDataToFlask2()
+  }
+
+  
+  const sendDataToFlask = async () => {
+    try {
+        const response = await fetch('http://localhost:8080/api/home', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message: 'welcome' })
+        });
+        if (response.ok) {
+            console.log('Data sent successfully');
+        } else {
+            console.error('Failed to send data');
+        }
+        // const responseBody = await response.json();
+        // setMessage(responseBody.message)
+        
+    } catch (error) {
+        console.error('Error sending data:', error);
+    }
+  };
+
+  const sendDataToFlask2 = async () => {
+    try {
+        const response = await fetch('http://localhost:8080/api/home', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ message: 'welcome2' })
+        });
+        if (response.ok) {
+            console.log('Data sent successfully');
+        } else {
+            console.error('Failed to send data');
+        }
+        // const responseBody = await response.json();
+        // setMessage(responseBody.message)
+        
+    } catch (error) {
+        console.error('Error sending data:', error);
+    }
+  };
+
   return (
     <div className=''>
         <div className="z-10 fixed w-[100vw] h-[10vh] bg-[#013022] flex flex-row justify-between items-center gap-2 text-white text-[0.7rem]">
@@ -94,7 +146,7 @@ function page() {
             </div>
 
             <div className="flex flex-row justify-center items-center">
-            <div className="nav2" onClick={nav1}>Residential</div>
+            <div className="nav2" onClick={handleClick} >Waste Sorter</div>
 
             <div className="flex-col justify-center items-center gap-5 absolute top-[15vh] w-[40vh] h-[25vh] bg-[#9AD19C] rounded-[10px] hidden text-[#137D17]" ref={ref1}>
                 <div className='flex flex-row justify-center items-center'>
@@ -146,7 +198,7 @@ function page() {
             </div>
 
             <div className="flex flex-row justify-center items-center">
-            <div className="nav5">Service Area</div>
+            <div className="nav5" onClick={handleClick2}>Diseases</div>
             </div>
 
             <div className="flex flex-row justify-center items-center">
@@ -155,6 +207,10 @@ function page() {
 
             <div className="flex flex-row justify-center items-center">
             <div className="nav7">Contact Us</div>
+            </div>
+
+            <div className="flex flex-row justify-center items-center">
+                <div className="nav9">T-Rod</div>
             </div>
 
             <div className="flex flex-row justify-center items-center">
@@ -169,7 +225,7 @@ function page() {
         </div>
 
         <div className='flex flex-row justify-between content-center px-5 py-5'>
-            <div className='flex flex-col h-[65vh] w-[25vw] gap-2 text-[0.8rem] p-3 bg-[#D9D9D9] rounded-md'>
+            <div className='flex flex-col h-[50vh] w-[25vw] gap-4 text-[0.8rem] p-5 bg-[#D9D9D9] rounded-md'>
                 <Image src={food1} width={300} height={300}/>
                 <div>
                     <div className='font-bold'>Leftover Rice</div>
@@ -190,7 +246,7 @@ function page() {
                 </div>
             </div>
 
-            <div className='flex flex-col h-[65vh] w-[25vw] gap-2 text-[0.8rem] p-3 bg-[#D9D9D9] rounded-md'>
+            <div className='flex flex-col h-[50vh] w-[25vw] gap-4 text-[0.8rem] p-5 bg-[#D9D9D9] rounded-md'>
                 <Image src={food2} width={300} height={300}/>
                 <div>
                     <div className='font-bold'>Sliced Bread</div>
@@ -211,7 +267,7 @@ function page() {
                 </div>
             </div>
 
-            <div className='flex flex-col h-[65vh] w-[25vw] gap-2 text-[0.8rem] p-3 bg-[#D9D9D9] rounded-md'>
+            <div className='flex flex-col h-[50vh] w-[25vw] gap-4 text-[0.8rem] p-5 bg-[#D9D9D9] rounded-md'>
                 <Image src={food3} width={300} height={300}/>
                 <div>
                     <div className='font-bold'>Wilted Romaine Lettuce</div>

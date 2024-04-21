@@ -1,9 +1,9 @@
 
-.nav1, .nav2, .nav3, .nav4, .nav5, .nav6, .nav7{
+.nav1, .nav2, .nav3, .nav4, .nav5, .nav6, .nav7, .nav9{
     transition: ease-in-out;
 }
 
-.nav1:hover, .nav2:hover, .nav3:hover, .nav4:hover, .nav5:hover, .nav6:hover, .nav7:hover{
+.nav1:hover, .nav2:hover, .nav3:hover, .nav4:hover, .nav5:hover, .nav6:hover, .nav7:hover, .nav9:hover{
     border-bottom: 2px solid white;
     cursor: pointer;
 }
@@ -17,6 +17,8 @@
 
 .bg{
     background-image: linear-gradient(to left, #d9d9d916 , #01443046, #01281dde), url('./pics/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .explore{
