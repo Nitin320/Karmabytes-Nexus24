@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
 import  React, { useEffect, useRef, useState } from 'react';
+import "../main.css"
 
 import food1 from "../pics/food1.png"
 import food2 from "../pics/food2.png"
@@ -25,7 +26,7 @@ import shapes from "../pics/shapes.png"
 
 function page() {
 
-    const ref1 = useRef();
+  const ref1 = useRef();
   const ref2 = useRef();
   const ref3 = useRef();
 
@@ -89,7 +90,7 @@ function page() {
             <Image src={logo} width={100} height={100}/>
 
             <div className="flex flex-row justify-center items-center">
-            <div className="nav1">Home</div>
+            <div className="nav1"><a href="/">Home</a></div>
             </div>
 
             <div className="flex flex-row justify-center items-center">
@@ -115,11 +116,11 @@ function page() {
             <div className="z-[50] flex-col justify-center items-center gap-5 absolute top-[15vh] w-[40vh] h-[25vh] bg-[#9AD19C] rounded-[10px] hidden text-[#137D17]" ref={ref2}>
                 <div className='flex flex-row justify-center items-center'>
                 <Image src={nonexp} width={30} height={30}/>
-                <div className='cursor-pointer'><a href='test'>Not Expired</a></div>
+                <div className='cursor-pointer'><a href='nonexpired'>Not Expired</a></div>
                 </div>
                 <div className='flex flex-row justify-center items-center'>
                 <Image src={exp} width={30} height={30}/>
-                <div className='cursor-pointer'>Expired</div>
+                <div className='cursor-pointer'><a href='expired'>Expired</a></div>
                 </div>
             </div>
 

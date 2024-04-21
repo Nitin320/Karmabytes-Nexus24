@@ -1,0 +1,9 @@
+0 Nothing
+1 Non Biodegradable
+2 Biodegradable
+3 Non Biodegradable
+4 Non Biodegradable
+5 Non Biodegradable
+6 Non Biodegradable
+7 Biodegradable
+8 Biodegradable

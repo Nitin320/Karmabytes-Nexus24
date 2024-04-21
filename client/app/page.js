@@ -156,11 +156,11 @@ export default function Home() {
           <div className="z-[50] flex-col justify-center items-center gap-5 absolute top-[15vh] w-[40vh] h-[25vh] bg-[#9AD19C] rounded-[10px] hidden text-[#137D17]" ref={ref2}>
             <div className='flex flex-row justify-center items-center'>
               <Image src={nonexp} width={30} height={30}/>
-              <div className='cursor-pointer'><a href='test'>Not Expired</a></div>
+              <div className='cursor-pointer'><a href='nonexpired'>Not Expired</a></div>
             </div>
             <div className='flex flex-row justify-center items-center'>
               <Image src={exp} width={30} height={30}/>
-              <div className='cursor-pointer'>Expired</div>
+              <div className='cursor-pointer'><a href='expired'>Expired</a></div>
             </div>
           </div>
 
@@ -254,8 +254,6 @@ export default function Home() {
         </div>
 
       </div>
-
-      <div className='absolute top-[160vh]'>{message}</div>
 
     </main>
     </div>
